@@ -7,25 +7,25 @@ const destinations = [
   {
     name: 'Paris, France',
     price: 'dès 450 000 XOF',
-    image: 'https://placehold.co/400x500.png',
+    image: 'https://images.unsplash.com/photo-1502602898657-3e91760c0341?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     hint: 'paris eiffel tower',
   },
   {
     name: 'Dubaï, EAU',
     price: 'dès 600 000 XOF',
-    image: 'https://placehold.co/400x500.png',
+    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     hint: 'dubai skyline',
   },
   {
     name: 'New York, USA',
     price: 'dès 750 000 XOF',
-    image: 'https://placehold.co/400x500.png',
+    image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     hint: 'new york city',
   },
   {
     name: 'Casamance, Sénégal',
     price: 'dès 95 000 XOF',
-    image: 'https://placehold.co/400x500.png',
+    image: 'https://images.unsplash.com/photo-1593325639149-16382a4a7516?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     hint: 'senegal beach',
   },
 ];

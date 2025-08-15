@@ -73,7 +73,7 @@ export default function Contact() {
                 </div>
             </div>
              <div className="relative h-64 w-full rounded-lg overflow-hidden mt-8">
-                <Image src="https://placehold.co/600x400.png" alt="Carte de Dakar" fill className="object-cover" data-ai-hint="dakar map" />
+                <Image src="https://images.unsplash.com/photo-1601134916222-2618e411b53e?q=80&w=600&h=400&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Carte de Dakar" fill className="object-cover" data-ai-hint="dakar map" />
             </div>
           </div>
           <div>

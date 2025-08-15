@@ -45,7 +45,7 @@ export default function About() {
           </div>
           <div className="relative h-80 lg:h-full min-h-[400px] w-full rounded-lg overflow-hidden">
             <Image
-              src="https://placehold.co/600x800.png"
+              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=600&h=800&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Notre équipe ou agence"
               fill
               className="object-cover"
