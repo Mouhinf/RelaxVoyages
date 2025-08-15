@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { QuoteRequestDialog } from '../layout/quote-request-dialog';
+import { Download } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -22,17 +23,18 @@ export default function Hero() {
         <p className="mt-4 text-xl md:text-2xl max-w-3xl mx-auto drop-shadow-md">
           Découvrez des destinations incroyables et vivez des expériences uniques avec SLAAC Voyages.
         </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link href="/destinations">
             <Button size="lg" variant="default" className="w-full sm:w-auto">
               Explorer les Destinations
             </Button>
           </Link>
-          <QuoteRequestDialog>
-            <Button size="lg" variant="default" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90">
-                Nous Contacter
-            </Button>
-          </QuoteRequestDialog>
+           <a href="/brochure-slaac-voyages.pdf" download>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white/20">
+                <Download className="mr-2 h-5 w-5" />
+                Notre Brochure
+              </Button>
+            </a>
         </div>
       </div>
     </section>

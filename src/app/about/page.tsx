@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import { Users, Globe, Heart, Building, Award, Target } from 'lucide-react';
+import { Users, Globe, Heart, Building, Award, Target, Download } from 'lucide-react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
+import { Button } from '@/components/ui/button';
 
 const whyUs = [
   {
@@ -77,6 +78,14 @@ export default function AboutPage() {
                   <p>
                     Que vous soyez à la recherche d'aventure, de culture, d'adrénaline, Slaac Voyages est votre partenaire incontournable pour la réalisation de vos projets. Grace à nos experts, nous mettons au service de nos clients un dispositif d'accompagnement personnalisé, un système de filtrage et des outils de dernière génération afin de leurs garantir les meilleures offres et les billets d'avion les moins chers.
                   </p>
+                </div>
+                 <div className="mt-6">
+                  <a href="/brochure-slaac-voyages.pdf" download>
+                    <Button size="lg" variant="default">
+                      <Download className="mr-2 h-5 w-5" />
+                      Télécharger notre brochure
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
