@@ -2,47 +2,52 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const destinations = [
   {
     name: 'Paris, France',
     price: 'dès 450 000 XOF',
-    image: 'https://images.unsplash.com/photo-1502602898657-3e91760c0341?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    hint: 'paris eiffel tower',
+    image: 'https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    hint: 'paris france',
+    tag: 'Europe',
   },
   {
     name: 'Dubaï, EAU',
     price: 'dès 600 000 XOF',
-    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    hint: 'dubai skyline',
+    image: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    hint: 'dubai city',
+    tag: 'Orient',
   },
   {
     name: 'New York, USA',
     price: 'dès 750 000 XOF',
-    image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    hint: 'new york city',
+    image: 'https://images.unsplash.com/photo-1546436836-07a91091f160?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    hint: 'new york usa',
+    tag: 'Amérique',
   },
   {
     name: 'Casamance, Sénégal',
     price: 'dès 95 000 XOF',
-    image: 'https://images.unsplash.com/photo-1593325639149-16382a4a7516?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    hint: 'senegal beach',
+    image: 'https://images.unsplash.com/photo-1547471080-774f651852b3?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    hint: 'senegal nature',
+    tag: 'Afrique',
   },
 ];
 
 export default function Destinations() {
   return (
-    <section id="destinations" className="py-16 sm:py-24 bg-background">
+    <section id="destinations" className="py-16 sm:py-24 bg-secondary">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary font-headline">Destinations Populaires</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary font-headline">Des Destinations qui Font Rêver</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explorez nos destinations de rêve et laissez-vous inspirer pour votre prochain voyage.
+            Que vous soyez en quête d'aventure, de détente ou de découvertes culturelles, nous avons la destination parfaite pour vous. Laissez-vous inspirer.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {destinations.map((dest) => (
-            <Card key={dest.name} className="overflow-hidden group">
+            <Card key={dest.name} className="overflow-hidden group shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-64">
                 <Image
                   src={dest.image}
@@ -51,12 +56,13 @@ export default function Destinations() {
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   data-ai-hint={dest.hint}
                 />
+                <Badge variant="default" className="absolute top-4 right-4 bg-accent text-accent-foreground">{dest.tag}</Badge>
               </div>
               <CardContent className="p-4">
                 <h3 className="text-lg font-semibold text-primary">{dest.name}</h3>
                 <p className="text-sm text-muted-foreground mt-1">{dest.price}</p>
                 <Button variant="link" className="p-0 mt-2 text-primary">
-                  Voir plus <ArrowRight className="ml-2 h-4 w-4" />
+                  Découvrir <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>

@@ -1,52 +1,62 @@
-import { Plane, Package, ShieldCheck, FileText, Map } from 'lucide-react';
+import { Plane, Package, ShieldCheck, FileText, Map, Hotel } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const services = [
   {
-    icon: <Plane className="h-10 w-10 text-primary" />,
-    title: 'Billets d’avion',
-    description: 'Toutes destinations, prix compétitifs.',
+    icon: <Plane className="h-8 w-8 text-primary" />,
+    title: 'Billetterie Aérienne',
+    description: "Réservez vos vols vers toutes les destinations du monde aux meilleurs tarifs. Nous trouvons pour vous les options les plus rapides et économiques.",
   },
   {
-    icon: <Package className="h-10 w-10 text-primary" />,
-    title: 'Packages touristiques',
-    description: 'Transport, hébergement et activités sur mesure.',
+    icon: <Package className="h-8 w-8 text-primary" />,
+    title: 'Packages sur Mesure',
+    description: "Des séjours conçus spécialement pour vous. Que vous voyagiez seul, en couple ou en groupe, nous créons le package parfait (vol + hôtel + activités).",
   },
   {
-    icon: <ShieldCheck className="h-10 w-10 text-primary" />,
-    title: 'Assurance voyage',
-    description: 'Couverture santé, annulation, et retard.',
+    icon: <ShieldCheck className="h-8 w-8 text-primary" />,
+    title: 'Assurance Voyage',
+    description: "Partez l'esprit tranquille. Nous vous proposons des assurances complètes pour vous couvrir contre tous les imprévus (santé, annulation, bagages).",
   },
   {
-    icon: <FileText className="h-10 w-10 text-primary" />,
-    title: 'Assistance visas',
-    description: 'Accompagnement dans les démarches administratives.',
+    icon: <FileText className="h-8 w-8 text-primary" />,
+    title: 'Assistance Visas',
+    description: "Simplifiez vos démarches administratives. Notre équipe d'experts vous accompagne pas à pas dans l'obtention de vos visas.",
   },
   {
-    icon: <Map className="h-10 w-10 text-primary" />,
-    title: 'Circuits découverte',
-    description: 'Au Sénégal et à l’étranger, thématiques variées.',
+    icon: <Hotel className="h-8 w-8 text-primary" />,
+    title: 'Réservation d\'Hôtels',
+    description: "Accédez à une sélection d'hébergements de qualité partout dans le monde, négociés aux meilleurs prix pour votre confort.",
+  },
+  {
+    icon: <Map className="h-8 w-8 text-primary" />,
+    title: 'Circuits et Excursions',
+    description: "Explorez la culture locale avec nos circuits organisés. Découvrez des sites incontournables et des trésors cachés au Sénégal et à l'étranger.",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-16 sm:py-24 bg-background">
+    <section id="services" className="py-16 sm:py-24 bg-white">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary font-headline">Nos Services</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Nous offrons une gamme complète de services pour faire de votre voyage une expérience inoubliable.
+          <h2 className="text-3xl md:text-4xl font-bold text-primary font-headline">Des Services Complets pour un Voyage Parfait</h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            De la réservation de votre billet d'avion à l'organisation de vos activités sur place, SLAAC Voyages s'occupe de chaque détail pour vous garantir une expérience fluide et mémorable.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <div key={service.title} className="text-center flex flex-col items-center">
-              <div className="bg-primary/10 rounded-full p-4 mb-4">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-primary">{service.title}</h3>
-              <p className="mt-2 text-muted-foreground">{service.description}</p>
-            </div>
+             <Card key={service.title} className="text-center flex flex-col items-center p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div className="bg-primary/10 rounded-full p-4 mb-4">
+                  {service.icon}
+                </div>
+                <CardHeader className="p-0">
+                  <CardTitle className="text-xl font-semibold text-primary">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-0 mt-2">
+                  <p className="text-muted-foreground">{service.description}</p>
+                </CardContent>
+            </Card>
           ))}
         </div>
       </div>

@@ -8,8 +8,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { MapPin, Phone, Mail } from 'lucide-react';
-import Image from 'next/image';
+import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Le nom doit contenir au moins 2 caractères.' }),
@@ -35,106 +35,121 @@ export default function Contact() {
     console.log(values);
     toast({
       title: 'Message envoyé !',
-      description: 'Nous vous recontacterons dans les plus brefs délais.',
+      description: 'Merci de nous avoir contactés. Nous reviendrons vers vous rapidement.',
     });
     form.reset();
   }
 
   return (
-    <section id="contact" className="py-16 sm:py-24 bg-white">
+    <section id="contact" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary font-headline">Contactez-nous</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary font-headline">Prêt à Partir ? Contactez-nous !</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Une question, une demande de devis ? Notre équipe est à votre écoute.
+                Racontez-nous votre projet de voyage, demandez un devis ou posez-nous simplement une question. Notre équipe est là pour vous aider à planifier votre prochaine aventure.
             </p>
         </div>
-        <div className="mt-12 grid lg:grid-cols-2 gap-12">
-          <div className="space-y-8">
+        <div className="mt-12 grid lg:grid-cols-2 gap-8 items-start">
+          <div className="space-y-6">
             <div className="flex items-start gap-4">
-                <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                <div className="p-3 bg-primary/10 rounded-full"><MapPin className="h-6 w-6 text-primary" /></div>
                 <div>
-                    <h3 className="text-lg font-semibold text-primary">Adresse</h3>
+                    <h3 className="text-lg font-semibold text-primary">Notre Bureau</h3>
                     <p className="text-muted-foreground">Immeuble TRAMES, Centre Ville, Dakar, Sénégal</p>
                 </div>
             </div>
             <div className="flex items-start gap-4">
-                <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                <div className="p-3 bg-primary/10 rounded-full"><Phone className="h-6 w-6 text-primary" /></div>
                 <div>
-                    <h3 className="text-lg font-semibold text-primary">Téléphone</h3>
+                    <h3 className="text-lg font-semibold text-primary">Appelez-nous</h3>
                     <p className="text-muted-foreground">+221 77 624 58 58</p>
                 </div>
             </div>
             <div className="flex items-start gap-4">
-                <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                <div className="p-3 bg-primary/10 rounded-full"><Mail className="h-6 w-6 text-primary" /></div>
                 <div>
-                    <h3 className="text-lg font-semibold text-primary">Email</h3>
+                    <h3 className="text-lg font-semibold text-primary">Écrivez-nous</h3>
                     <p className="text-muted-foreground">contact@slaacvoyages.com</p>
                 </div>
             </div>
-             <div className="relative h-64 w-full rounded-lg overflow-hidden mt-8">
-                <Image src="https://images.unsplash.com/photo-1601134916222-2618e411b53e?q=80&w=600&h=400&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Carte de Dakar" fill className="object-cover" data-ai-hint="dakar map" />
+             <div className="pt-6">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.399587848358!2d-17.44976788515869!3d14.68962298974578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1725a33500001%3A0x51c91c6e1f4e1b7d!2sDakar!5e0!3m2!1sfr!2ssn!4v1620901591837!5m2!1sfr!2ssn" 
+                    width="100%" 
+                    height="300" 
+                    style={{border:0}} 
+                    allowFullScreen={true} 
+                    loading="lazy"
+                    className="rounded-lg shadow-md"
+                ></iframe>
             </div>
           </div>
-          <div>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Nom complet</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Votre nom" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Votre email" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Téléphone (Optionnel)</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Votre numéro de téléphone" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Votre message</FormLabel>
-                      <FormControl>
-                        <Textarea placeholder="Décrivez votre projet de voyage..." rows={5} {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" size="lg">Envoyer la demande</Button>
-              </form>
-            </Form>
-          </div>
+          <Card className="w-full">
+            <CardHeader>
+                <CardTitle>Envoyez-nous un message</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Nom complet</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Votre nom et prénom" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Votre adresse email" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Téléphone (Optionnel)</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Votre numéro de téléphone" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Votre message</FormLabel>
+                          <FormControl>
+                            <Textarea placeholder="Bonjour, je souhaiterais obtenir des informations sur..." rows={5} {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <Button type="submit" className="w-full" size="lg">
+                        Envoyer ma demande <Send className="ml-2 h-4 w-4" />
+                    </Button>
+                  </form>
+                </Form>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
