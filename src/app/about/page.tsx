@@ -69,7 +69,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-primary">Votre Partenaire pour des Voyages Inoubliables</h2>
                 <div className="mt-4 text-lg text-muted-foreground space-y-4">
                   <p>
-                    SLAAC VOYAGES est une agence de voyages et de tourisme, basée à Sacré-Cœur 3, VDN, immeuble Dieynaba, spécialisée dans la vente des billets d'avion pour toutes les destinations, les préinscriptions, l'assistance visa, les réservations d'hôtel, les prises de rendez-vous et le tourisme.
+                    SLAAC VOYAGES est une agence de voyages et de tourisme, basée au Centre ville de Dakar à l'immeuble TRAMES au premier étage, spécialisée dans la vente des billets d'avion pour toutes les destinations, les préinscriptions, l'assistance visa, les réservations d'hôtel, les prises de rendez-vous et le tourisme.
                   </p>
                   <p>
                     Nous proposons une gamme complète de services pour répondre à vos besoins professionnels et touristiques. Notre objectif est de vous offrir le meilleur du tourisme à travers des excursions authentiques, des circuits de voyages à thèmes, des séjours linguistiques, des séjours religieux, les Transferts en VTC ou par la plage.
