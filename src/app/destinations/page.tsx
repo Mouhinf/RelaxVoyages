@@ -33,7 +33,7 @@ const destinations = [
   {
     name: 'Casamance, Sénégal',
     price: 'dès 95 000 XOF',
-    image: 'https://placehold.co/400x500.png',
+    image: 'https://images.unsplash.com/photo-1623341158143-a6021c6834b9?q=80&w=400&h=500&fit=crop',
     hint: 'senegal village',
     tag: 'Afrique',
   },
