@@ -33,7 +33,7 @@ const destinations = [
   {
     name: 'Casamance, Sénégal',
     price: 'dès 95 000 XOF',
-    image: 'https://images.unsplash.com/photo-1610495357908-a7732005a761?q=80&w=400&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1547471080-774f651852b3?q=80&w=400&h=500&fit=crop',
     hint: 'senegal nature',
     tag: 'Afrique',
   },
@@ -54,7 +54,7 @@ const destinations = [
   {
     name: 'Le Caire, Égypte',
     price: 'dès 520 000 XOF',
-    image: 'https://images.unsplash.com/photo-1568322445389-f64ac2515020?q=80&w=400&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1572252195253-e50a7c133469?q=80&w=400&h=500&fit=crop',
     hint: 'cairo egypt',
     tag: 'Afrique',
   },
@@ -82,14 +82,14 @@ const destinations = [
   {
     name: 'Londres, Royaume-Uni',
     price: 'dès 510 000 XOF',
-    image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=400&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=400&h=500&fit=crop',
     hint: 'london uk',
     tag: 'Europe',
   },
   {
     name: 'Bangkok, Thaïlande',
     price: 'dès 890 000 XOF',
-    image: 'https://images.unsplash.com/photo-1539091295392-a28a3a355605?q=80&w=400&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1563492065599-3520f775ee09?q=80&w=400&h=500&fit=crop',
     hint: 'bangkok thailand',
     tag: 'Asie',
   },
@@ -103,7 +103,7 @@ const destinations = [
   {
     name: 'Sydney, Australie',
     price: 'dès 1 200 000 XOF',
-    image: 'https://images.unsplash.com/photo-1524293581269-a9a35235775f?q=80&w=400&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1506973035872-90c88ee45dba?q=80&w=400&h=500&fit=crop',
     hint: 'sydney australia',
     tag: 'Océanie',
   },
@@ -117,7 +117,7 @@ const destinations = [
   {
     name: 'Lisbonne, Portugal',
     price: 'dès 460 000 XOF',
-    image: 'https://images.unsplash.com/photo-1555881400-69a2384edcd4?q=80&w=400&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1587899763738-3c358a98d363?q=80&w=400&h=500&fit=crop',
     hint: 'lisbon portugal',
     tag: 'Europe',
   },
