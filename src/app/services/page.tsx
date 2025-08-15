@@ -1,4 +1,4 @@
-import { Plane, Package, ShieldCheck, FileText, Map, Hotel, Lifebuoy, Star } from 'lucide-react';
+import { Plane, Package, ShieldCheck, FileText, Map, Hotel, LifeBuoy, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -42,7 +42,7 @@ const services = [
     description: "Vivez une expérience exclusive avec nos offres de voyages de luxe. Jets privés, hébergements 5 étoiles, et services de conciergerie personnalisés.",
   },
   {
-    icon: <Lifebuoy className="h-8 w-8 text-primary" />,
+    icon: <LifeBuoy className="h-8 w-8 text-primary" />,
     title: 'Support 24/7',
     description: "Une assistance continue tout au long de votre voyage. Notre équipe est disponible 24/7 pour répondre à toutes vos questions et vous aider en cas de besoin.",
   },
