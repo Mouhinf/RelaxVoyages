@@ -2,8 +2,8 @@ import { Plane, Package, ShieldCheck, FileText, Map, Hotel, LifeBuoy, Star } fro
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { QuoteRequestDialog } from '@/components/layout/quote-request-dialog';
 
 const services = [
   {
@@ -76,9 +76,11 @@ export default function ServicesPage() {
                     <CardContent className="p-0 mt-2 flex-grow">
                       <p className="text-muted-foreground">{service.description}</p>
                     </CardContent>
-                    <Link href="/contact" className="mt-4">
+                    <div className="mt-4">
+                      <QuoteRequestDialog>
                         <Button variant="link">Demander un devis</Button>
-                    </Link>
+                      </QuoteRequestDialog>
+                    </div>
                 </Card>
               ))}
             </div>

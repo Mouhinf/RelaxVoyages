@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import Link from 'next/link';
+import { QuoteRequestDialog } from '@/components/layout/quote-request-dialog';
 
 const destinations = [
   {
@@ -98,11 +98,11 @@ export default function DestinationsPage() {
                   <CardContent className="p-4 flex flex-col flex-grow">
                     <h3 className="text-lg font-semibold text-primary">{dest.name}</h3>
                     <p className="text-sm text-muted-foreground mt-1 flex-grow">{dest.price}</p>
-                    <Link href="/contact">
+                    <QuoteRequestDialog>
                       <Button variant="link" className="p-0 mt-2 text-primary self-start">
                         Obtenir un devis <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
-                    </Link>
+                    </QuoteRequestDialog>
                   </CardContent>
                 </Card>
               ))}

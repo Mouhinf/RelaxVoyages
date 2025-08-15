@@ -4,12 +4,14 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Send } from 'lucide-react';
+import { QuoteRequestDialog } from './quote-request-dialog';
 
 const navLinks = [
-  { href: '/about', label: 'À propos' },
+  { href: '/', label: 'Accueil' },
   { href: '/services', label: 'Services' },
   { href: '/destinations', label: 'Destinations' },
   { href: '/contact', label: 'Contact' },
+  { href: '/about', label: 'À propos' },
 ];
 
 const PlaneIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -41,12 +43,12 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-           <Link href="/contact">
-            <Button className="hidden sm:flex" variant="default">
-                Demander un Devis
-                <Send className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
+            <QuoteRequestDialog>
+              <Button className="hidden sm:flex" variant="default">
+                  Demander un Devis
+                  <Send className="ml-2 h-4 w-4" />
+              </Button>
+            </QuoteRequestDialog>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
@@ -71,12 +73,12 @@ export default function Header() {
                     </Link>
                   ))}
                 </nav>
-                 <Link href="/contact">
-                    <Button className="w-full" variant="default">
-                        Demander un Devis
-                        <Send className="ml-2 h-4 w-4" />
-                    </Button>
-                </Link>
+                <QuoteRequestDialog>
+                  <Button className="w-full" variant="default">
+                      Demander un Devis
+                      <Send className="ml-2 h-4 w-4" />
+                  </Button>
+                </QuoteRequestDialog>
               </div>
             </SheetContent>
           </Sheet>
