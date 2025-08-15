@@ -1,11 +1,12 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Info } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { QuoteRequestDialog } from '@/components/layout/quote-request-dialog';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 
 const destinations = [
   {
@@ -64,6 +65,34 @@ const destinations = [
     hint: 'rio de janeiro',
     tag: 'Amérique du Sud',
   },
+  {
+    name: 'Rome, Italie',
+    price: 'dès 480 000 XOF',
+    image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=400&h=500&fit=crop',
+    hint: 'rome italy',
+    tag: 'Europe',
+  },
+  {
+    name: 'Bali, Indonésie',
+    price: 'dès 920 000 XOF',
+    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=400&h=500&fit=crop',
+    hint: 'bali indonesia',
+    tag: 'Asie',
+  },
+  {
+    name: 'Londres, Royaume-Uni',
+    price: 'dès 510 000 XOF',
+    image: 'https://images.unsplash.com/photo-1533929736458-ca588913cde6?q=80&w=400&h=500&fit=crop',
+    hint: 'london uk',
+    tag: 'Europe',
+  },
+  {
+    name: 'Bangkok, Thaïlande',
+    price: 'dès 890 000 XOF',
+    image: 'https://images.unsplash.com/photo-1563492065599-3520f775ee09?q=80&w=400&h=500&fit=crop',
+    hint: 'bangkok thailand',
+    tag: 'Asie',
+  },
 ];
 
 export default function DestinationsPage() {
@@ -82,6 +111,12 @@ export default function DestinationsPage() {
 
         <section id="destinations" className="py-16 sm:py-24 bg-background">
           <div className="container mx-auto max-w-7xl px-4">
+            <Alert className="mb-8 bg-blue-50 border-blue-200 text-blue-800">
+                <Info className="h-5 w-5 text-blue-600" />
+                <AlertDescription>
+                Les tarifs affichés sont des estimations de départ et peuvent varier en fonction de la saison, de la disponibilité et du moment de la réservation. Pour un devis précis, veuillez nous contacter.
+                </AlertDescription>
+            </Alert>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {destinations.map((dest) => (
                 <Card key={dest.name} className="overflow-hidden group shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
