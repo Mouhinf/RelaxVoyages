@@ -89,7 +89,7 @@ export default function ContactPage() {
                         </div>
                         <div className="pt-6">
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.399587848358!2d-17.44976788515869!3d14.68962298974578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1725a33500001%3A0x51c91c6e1f4e1b7d!2sDakar!5e0!3m2!1sfr!2ssn!4v1620901591837!5m2!1sfr!2ssn" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.399587848358!2d-17.44976788515869!3d14.68962298974578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f7e0344b17%3A0x8035f4119335f448!2sTrames%20Immeuble!5e0!3m2!1sfr!2ssn!4v1620901591837!5m2!1sfr!2ssn" 
                                 width="100%" 
                                 height="300" 
                                 style={{border:0}} 
