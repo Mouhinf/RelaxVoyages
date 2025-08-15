@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { QuoteRequestDialog } from '../layout/quote-request-dialog';
 import { Download } from 'lucide-react';
 
 export default function Hero() {
@@ -30,7 +29,7 @@ export default function Hero() {
             </Button>
           </Link>
            <a href="/brochure-slaac-voyages.pdf" download>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white/20">
+              <Button size="lg" variant="secondary" className="w-full sm:w-auto">
                 <Download className="mr-2 h-5 w-5" />
                 Notre Brochure
               </Button>

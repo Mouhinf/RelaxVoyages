@@ -10,11 +10,11 @@ export default function HomeAbout() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-80 lg:h-full min-h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=600&h=800&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Notre équipe ou agence"
+              src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?q=80&w=600&h=800&fit=crop"
+              alt="Globe terrestre et carte du monde"
               fill
               className="object-cover"
-              data-ai-hint="happy travelers"
+              data-ai-hint="world map travel"
             />
           </div>
           <div>

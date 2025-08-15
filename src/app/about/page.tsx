@@ -59,15 +59,15 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 lg:h-full min-h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=600&h=800&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Notre équipe ou agence"
+                  src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?q=80&w=600&h=800&fit=crop"
+                  alt="Globe terrestre et carte du monde"
                   fill
                   className="object-cover"
-                  data-ai-hint="happy travelers"
+                  data-ai-hint="world map travel"
                 />
               </div>
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary">Votre Partenaire pour des Voyages Inoubliables</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary">Votre Guide pour des Voyages Inoubliables</h2>
                 <div className="mt-4 text-lg text-muted-foreground space-y-4">
                   <p>
                     SLAAC VOYAGES est une agence de voyages et de tourisme, basée au Centre ville de Dakar à l'immeuble TRAMES au premier étage, spécialisée dans la vente des billets d'avion pour toutes les destinations, les préinscriptions, l'assistance visa, les réservations d'hôtel, les prises de rendez-vous et le tourisme.
