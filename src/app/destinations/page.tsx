@@ -93,6 +93,34 @@ const destinations = [
     hint: 'bangkok thailand',
     tag: 'Asie',
   },
+  {
+    name: 'Marrakech, Maroc',
+    price: 'dès 280 000 XOF',
+    image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=400&h=500&fit=crop',
+    hint: 'marrakech morocco',
+    tag: 'Afrique',
+  },
+  {
+    name: 'Sydney, Australie',
+    price: 'dès 1 200 000 XOF',
+    image: 'https://images.unsplash.com/photo-1506973035872-90c88ee4dbb5?q=80&w=400&h=500&fit=crop',
+    hint: 'sydney australia',
+    tag: 'Océanie',
+  },
+  {
+    name: 'Amsterdam, Pays-Bas',
+    price: 'dès 490 000 XOF',
+    image: 'https://images.unsplash.com/photo-1584003564911-a7a321c84e1c?q=80&w=400&h=500&fit=crop',
+    hint: 'amsterdam netherlands',
+    tag: 'Europe',
+  },
+  {
+    name: 'Lisbonne, Portugal',
+    price: 'dès 460 000 XOF',
+    image: 'https://images.unsplash.com/photo-1587789202068-3d84382d613b?q=80&w=400&h=500&fit=crop',
+    hint: 'lisbon portugal',
+    tag: 'Europe',
+  },
 ];
 
 export default function DestinationsPage() {
