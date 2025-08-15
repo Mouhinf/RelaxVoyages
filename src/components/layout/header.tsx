@@ -6,10 +6,10 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Send } from 'lucide-react';
 
 const navLinks = [
-  { href: '#about', label: 'À propos' },
-  { href: '#services', label: 'Services' },
-  { href: '#destinations', label: 'Destinations' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/about', label: 'À propos' },
+  { href: '/services', label: 'Services' },
+  { href: '/destinations', label: 'Destinations' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const PlaneIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -41,12 +41,12 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-           <a href="#contact">
+           <Link href="/contact">
             <Button className="hidden sm:flex" variant="default">
                 Demander un Devis
                 <Send className="ml-2 h-4 w-4" />
             </Button>
-          </a>
+          </Link>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
@@ -71,12 +71,12 @@ export default function Header() {
                     </Link>
                   ))}
                 </nav>
-                 <a href="#contact">
+                 <Link href="/contact">
                     <Button className="w-full" variant="default">
                         Demander un Devis
                         <Send className="ml-2 h-4 w-4" />
                     </Button>
-                </a>
+                </Link>
               </div>
             </SheetContent>
           </Sheet>

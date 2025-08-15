@@ -32,10 +32,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-primary">Navigation</h3>
             <ul className="mt-2 space-y-1 text-sm">
-              <li><Link href="#about" className="hover:text-primary">À propos</Link></li>
-              <li><Link href="#services" className="hover:text-primary">Services</Link></li>
-              <li><Link href="#destinations" className="hover:text-primary">Destinations</Link></li>
-              <li><Link href="#contact" className="hover:text-primary">Contact</Link></li>
+              <li><Link href="/about" className="hover:text-primary">À propos</Link></li>
+              <li><Link href="/services" className="hover:text-primary">Services</Link></li>
+              <li><Link href="/destinations" className="hover:text-primary">Destinations</Link></li>
+              <li><Link href="/contact" className="hover:text-primary">Contact</Link></li>
             </ul>
           </div>
           <div>
