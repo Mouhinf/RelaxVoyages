@@ -8,7 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, MessageCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
@@ -66,11 +66,11 @@ export default function ContactPage() {
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
-                            <div className="p-3 bg-primary/10 rounded-full"><Phone className="h-6 w-6 text-primary" /></div>
+                            <div className="p-3 bg-primary/10 rounded-full"><MessageCircle className="h-6 w-6 text-primary" /></div>
                             <div>
-                                <h3 className="text-lg font-semibold text-primary">Appelez-nous</h3>
+                                <h3 className="text-lg font-semibold text-primary">WhatsApp</h3>
                                 <a href="https://wa.me/221776245858" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
-                                    +221 77 624 58 58
+                                    +221 77 624 58 58 (Discussion instantanée)
                                 </a>
                             </div>
                         </div>

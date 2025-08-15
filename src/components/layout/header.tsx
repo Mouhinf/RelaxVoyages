@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Send } from 'lucide-react';
+import { Menu, Send, MessageCircle } from 'lucide-react';
 import { QuoteRequestDialog } from './quote-request-dialog';
 
 const navLinks = [
@@ -42,7 +42,13 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
+            <a href="https://wa.me/221776245858" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon" className="hidden sm:flex">
+                    <MessageCircle className="h-5 w-5" />
+                    <span className="sr-only">Contacter sur WhatsApp</span>
+                </Button>
+            </a>
             <QuoteRequestDialog>
               <Button className="hidden sm:flex" variant="default">
                   Demander un Devis
@@ -79,6 +85,11 @@ export default function Header() {
                       <Send className="ml-2 h-4 w-4" />
                   </Button>
                 </QuoteRequestDialog>
+                <a href="https://wa.me/221776245858" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" className="w-full">
+                        <MessageCircle className="mr-2 h-5 w-5" /> Contacter sur WhatsApp
+                    </Button>
+                </a>
               </div>
             </SheetContent>
           </Sheet>
