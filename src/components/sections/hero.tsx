@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { QuoteRequestDialog } from '../layout/quote-request-dialog';
 
 export default function Hero() {
   return (
@@ -27,11 +28,11 @@ export default function Hero() {
               Explorer les Destinations
             </Button>
           </Link>
-          <Link href="/contact">
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary w-full sm:w-auto">
-              Nous Contacter
+          <QuoteRequestDialog>
+            <Button size="lg" variant="default" className="w-full sm:w-auto bg-accent text-accent-foreground hover:bg-accent/90">
+                Nous Contacter
             </Button>
-          </Link>
+          </QuoteRequestDialog>
         </div>
       </div>
     </section>

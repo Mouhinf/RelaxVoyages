@@ -25,7 +25,7 @@ const companyInfo = [
   {
     icon: <Building className="h-10 w-10 text-primary" />,
     title: 'Notre Histoire',
-    description: "Fondée en 2015 à Dakar, SLAAC Voyages est née d'une passion pour la découverte et le partage. Nous avons commencé avec une petite équipe et une grande vision : rendre le voyage accessible et inoubliable pour tous.",
+    description: "Fondée à Dakar, SLAAC Voyages est née d'une passion pour la découverte et le partage. Nous avons commencé avec une petite équipe et une grande vision : rendre le voyage accessible et inoubliable pour tous.",
   },
   {
     icon: <Target className="h-10 w-10 text-primary" />,
@@ -67,12 +67,30 @@ export default function AboutPage() {
               </div>
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary">Votre Partenaire pour des Voyages Inoubliables</h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                  Chez SLAAC Voyages, nous croyons que chaque voyage est une histoire unique. Depuis notre base à Dakar, nous nous engageons à transformer vos rêves d'évasion en réalité, en concevant des expériences de voyage authentiques et mémorables.
-                </p>
-                <div className="mt-8 space-y-6">
+                <div className="mt-4 text-lg text-muted-foreground space-y-4">
+                  <p>
+                    SLAAC VOYAGES est une agence de voyages et de tourisme, basée à Sacré-Cœur 3, VDN, immeuble Dieynaba, spécialisée dans la vente des billets d'avion pour toutes les destinations, les préinscriptions, l'assistance visa, les réservations d'hôtel, les prises de rendez-vous et le tourisme.
+                  </p>
+                  <p>
+                    Nous proposons une gamme complète de services pour répondre à vos besoins professionnels et touristiques. Notre objectif est de vous offrir le meilleur du tourisme à travers des excursions authentiques, des circuits de voyages à thèmes, des séjours linguistiques, des séjours religieux, les Transferts en VTC ou par la plage.
+                  </p>
+                  <p>
+                    Que vous soyez à la recherche d'aventure, de culture, d'adrénaline, Slaac Voyages est votre partenaire incontournable pour la réalisation de vos projets. Grace à nos experts, nous mettons au service de nos clients un dispositif d'accompagnement personnalisé, un système de filtrage et des outils de dernière génération afin de leurs garantir les meilleures offres et les billets d'avion les moins chers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 sm:py-24 bg-secondary">
+            <div className="container mx-auto max-w-7xl px-4">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-primary">Pourquoi nous choisir ?</h2>
+                </div>
+                 <div className="grid md:grid-cols-3 gap-8">
                   {whyUs.map((item) => (
-                    <div key={item.title} className="flex items-start gap-4">
+                    <div key={item.title} className="bg-background p-6 rounded-lg shadow-md flex items-start gap-4">
                       <div className="flex-shrink-0 bg-primary/10 rounded-lg p-3">
                         {item.icon}
                       </div>
@@ -83,19 +101,17 @@ export default function AboutPage() {
                     </div>
                   ))}
                 </div>
-              </div>
             </div>
-          </div>
         </section>
 
-        <section className="py-16 sm:py-24 bg-secondary">
+        <section className="py-16 sm:py-24 bg-background">
             <div className="container mx-auto max-w-7xl px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-primary">Plus sur SLAAC Voyages</h2>
                 </div>
                 <div className="grid md:grid-cols-3 gap-8 text-center">
                     {companyInfo.map((item) => (
-                        <div key={item.title} className="bg-background p-8 rounded-lg shadow-md flex flex-col items-center">
+                        <div key={item.title} className="bg-secondary/50 p-8 rounded-lg shadow-md flex flex-col items-center">
                             <div className="bg-primary/10 rounded-full p-4 mb-4">
                                 {item.icon}
                             </div>

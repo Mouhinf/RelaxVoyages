@@ -4,6 +4,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Button } from '@/components/ui/button';
 import { QuoteRequestDialog } from '@/components/layout/quote-request-dialog';
+import Image from 'next/image';
 
 const services = [
   {
@@ -62,11 +63,36 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section id="services" className="py-16 sm:py-24 bg-white">
+        <section className="py-16 sm:py-24 bg-background">
+            <div className="container mx-auto max-w-7xl px-4">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-primary">Un Service Complet pour un Voyage Serein</h2>
+                        <p className="mt-4 text-lg text-muted-foreground">
+                            Chez SLAAC Voyages, notre mission est de rendre votre expérience de voyage aussi simple et agréable que possible. Nous comprenons que chaque voyageur est unique, c'est pourquoi nous offrons une gamme de services entièrement personnalisables pour répondre à vos moindres désirs.
+                        </p>
+                        <p className="mt-4 text-muted-foreground">
+                            Grâce à notre expertise et à notre réseau de partenaires mondiaux, nous nous occupons de tous les détails, des plus simples aux plus complexes. Vous n'avez qu'à faire vos valises et vous préparer à créer des souvenirs inoubliables.
+                        </p>
+                    </div>
+                    <div className="relative h-80 lg:h-full min-h-[300px] w-full rounded-lg overflow-hidden shadow-lg">
+                        <Image
+                            src="https://images.unsplash.com/photo-1562862829-7607a781a742?q=80&w=600&h=400&fit=crop"
+                            alt="Service client de l'agence de voyage"
+                            fill
+                            className="object-cover"
+                            data-ai-hint="customer service travel"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" className="py-16 sm:py-24 bg-secondary/50">
           <div className="container mx-auto max-w-7xl px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service) => (
-                <Card key={service.title} className="text-center flex flex-col items-center p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <Card key={service.title} className="text-center flex flex-col items-center p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 bg-background">
                     <div className="bg-primary/10 rounded-full p-4 mb-4">
                       {service.icon}
                     </div>
