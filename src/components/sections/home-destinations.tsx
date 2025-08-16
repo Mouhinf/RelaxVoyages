@@ -30,7 +30,7 @@ const destinations = [
   {
     name: 'Casamance, Sénégal',
     price: 'dès 95 000 XOF',
-    image: 'https://firebasestudio.googleapis.com/v0/b/firebase-studio-users.appspot.com/o/projects%2Flsp-g-000-501116-20240730-151042_8388607%2Fuser_input_files%2F3ea21966-2679-43c3-b097-f529f7f89d81?alt=media&token=48f7d9dd-d1d8-4f80-873b-5a1e28919f2a',
+    image: '/casamance.webp',
     hint: 'senegal beach',
     tag: 'Afrique',
   },

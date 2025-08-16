@@ -33,7 +33,7 @@ const destinations = [
   {
     name: 'Casamance, Sénégal',
     price: 'dès 95 000 XOF',
-    image: 'https://firebasestudio.googleapis.com/v0/b/firebase-studio-users.appspot.com/o/projects%2Flsp-g-000-501116-20240730-151042_8388607%2Fuser_input_files%2F3ea21966-2679-43c3-b097-f529f7f89d81?alt=media&token=48f7d9dd-d1d8-4f80-873b-5a1e28919f2a',
+    image: '/casamance.webp',
     hint: 'senegal beach',
     tag: 'Afrique',
   },
@@ -54,7 +54,7 @@ const destinations = [
   {
     name: 'Le Caire, Égypte',
     price: 'dès 520 000 XOF',
-    image: 'https://images.unsplash.com/photo-1572252195253-e50a7c133469?q=80&w=400&h=500&fit=crop',
+    image: '/caire.jpg',
     hint: 'cairo egypt',
     tag: 'Afrique',
   },
@@ -89,7 +89,7 @@ const destinations = [
   {
     name: 'Bangkok, Thaïlande',
     price: 'dès 890 000 XOF',
-    image: 'https://images.unsplash.com/photo-1563492065599-3520f775ee09?q=80&w=400&h=500&fit=crop',
+    image: '/Bangkok.jpg',
     hint: 'bangkok thailand',
     tag: 'Asie',
   },
@@ -103,7 +103,7 @@ const destinations = [
   {
     name: 'Sydney, Australie',
     price: 'dès 1 200 000 XOF',
-    image: 'https://images.unsplash.com/photo-1506973035872-90c88ee45dba?q=80&w=400&h=500&fit=crop',
+    image: '/sydney.jpg',
     hint: 'sydney australia',
     tag: 'Océanie',
   },
@@ -117,7 +117,7 @@ const destinations = [
   {
     name: 'Lisbonne, Portugal',
     price: 'dès 460 000 XOF',
-    image: 'https://images.unsplash.com/photo-1587899763738-3c358a98d363?q=80&w=400&h=500&fit=crop',
+    image: '/lisbonne.jpg',
     hint: 'lisbon portugal',
     tag: 'Europe',
   },
