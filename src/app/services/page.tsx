@@ -77,7 +77,7 @@ export default function ServicesPage() {
                     </div>
                     <div className="relative h-80 lg:h-full min-h-[300px] w-full rounded-lg overflow-hidden shadow-lg">
                         <Image
-                            src="https://images.unsplash.com/photo-1562862829-7607a781a742?q=80&w=600&h=400&fit=crop"
+                            src="/passport.jpg"
                             alt="Service client de l'agence de voyage"
                             fill
                             className="object-cover"
