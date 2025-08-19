@@ -7,28 +7,28 @@ import { Badge } from '@/components/ui/badge';
 const destinations = [
   {
     name: 'Paris, France',
-    price: 'dès 450 000 XOF',
+    price: 'À partir de  300 000 XOF',
     image: 'https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     hint: 'paris france',
     tag: 'Europe',
   },
   {
     name: 'Dubaï, EAU',
-    price: 'dès 600 000 XOF',
+    price: 'À partir de  350 000 XOF',
     image: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     hint: 'dubai city',
     tag: 'Orient',
   },
   {
     name: 'New York, USA',
-    price: 'dès 750 000 XOF',
+    price: 'À partir de  750 000 XOF',
     image: 'https://images.unsplash.com/photo-1546436836-07a91091f160?q=80&w=400&h=500&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     hint: 'new york usa',
     tag: 'Amérique',
   },
   {
     name: 'Casamance, Sénégal',
-    price: 'dès 95 000 XOF',
+    price: 'À partir de  45 000 XOF',
     image: '/avion.jpg',
     hint: 'senegal nature',
     tag: 'Afrique',

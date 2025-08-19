@@ -49,7 +49,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-            <a href="https://wa.me/221776245858" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/221773129090" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="icon" className="hidden sm:flex">
                     <WhatsAppIcon className="h-5 w-5 fill-current" />
                     <span className="sr-only">Contacter sur WhatsApp</span>
@@ -91,7 +91,7 @@ export default function Header() {
                       <Send className="ml-2 h-4 w-4" />
                   </Button>
                 </QuoteRequestDialog>
-                <a href="https://wa.me/221776245858" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/221773129090" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="w-full">
                         <WhatsAppIcon className="mr-2 h-5 w-5 fill-current" /> Contacter sur WhatsApp
                     </Button>

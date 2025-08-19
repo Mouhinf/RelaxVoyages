@@ -75,8 +75,8 @@ export default function ContactPage() {
                             <div className="p-3 bg-primary/10 rounded-full"><WhatsAppIcon className="h-6 w-6 text-primary fill-current" /></div>
                             <div>
                                 <h3 className="text-lg font-semibold text-primary">WhatsApp</h3>
-                                <a href="https://wa.me/221776245858" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center gap-2">
-                                    <WhatsAppIcon className="h-4 w-4 fill-current" /> +221 77 624 58 58 (Discussion instantanée)
+                                <a href="https://wa.me/221773129090" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center gap-2">
+                                    <WhatsAppIcon className="h-4 w-4 fill-current" /> +221 77 312 90 90 (Discussion instantanée)
                                 </a>
                             </div>
                         </div>
