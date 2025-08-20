@@ -130,8 +130,6 @@ export default function ServicesPage() {
             </div>
         </section>
 
-        <section className="py-16 sm:py-24 bg-gray-100"> {/* Using a different background for distinction */}
-
         <section id="services" className="py-16 sm:py-24 bg-secondary/50">
             <div className="container mx-auto max-w-7xl px-4 text-center">
                 <Button onClick={() => setShowTourismServices(!showTourismServices)} size="lg">
