@@ -1,3 +1,5 @@
+'use client';
+
 import { Plane, Package, ShieldCheck, FileText, Map, Hotel, LifeBuoy, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/layout/header';
@@ -5,6 +7,43 @@ import Footer from '@/components/layout/footer';
 import { Button } from '@/components/ui/button';
 import { QuoteRequestDialog } from '@/components/layout/quote-request-dialog';
 import Image from 'next/image';
+import { useState } from 'react';
+
+const importExportServices = [
+  {
+    icon: <Package className="h-8 w-8 text-primary" />,
+    title: 'Conseil et Assistance',
+    description: "Accompagnement personnalisé pour vos démarches d'importation et d'exportation.",
+  },
+  {
+    icon: <FileText className="h-8 w-8 text-primary" />,
+    title: 'Gestion Documentaire',
+    description: "Prise en charge de tous les documents nécessaires (déclarations douanières, certificats, etc.).",
+  },
+  {
+    icon: <ShieldCheck className="h-8 w-8 text-primary" />,
+    title: 'Logistique et Transport',
+    description: "Optimisation et organisation du transport de vos marchandises à l'échelle mondiale.",
+  },
+];
+
+const vehicleServices = [
+  {
+    icon: <Plane className="h-8 w-8 text-primary" />,
+    title: 'Location de Voitures',
+    description: "Large gamme de véhicules disponibles à la location, adaptés à tous vos besoins et budgets.",
+  },
+  {
+    icon: <Package className="h-8 w-8 text-primary" />,
+    title: 'Vente de Véhicules',
+    description: "Conseil et accompagnement pour l'achat ou la vente de véhicules neufs ou d'occasion.",
+  },
+  {
+    icon: <ShieldCheck className="h-8 w-8 text-primary" />,
+    title: 'Gestion de Flotte',
+    description: "Solutions complètes pour la gestion de parcs automobiles d'entreprises.",
+  },
+];
 
 const services = [
   {
@@ -50,6 +89,9 @@ const services = [
 ];
 
 export default function ServicesPage() {
+  const [showTourismServices, setShowTourismServices] = useState(false);
+  const [showImportExportServices, setShowImportExportServices] = useState(false);
+  const [showVehicleServices, setShowVehicleServices] = useState(false);
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
@@ -88,29 +130,86 @@ export default function ServicesPage() {
             </div>
         </section>
 
+        <section className="py-16 sm:py-24 bg-gray-100"> {/* Using a different background for distinction */}
+
         <section id="services" className="py-16 sm:py-24 bg-secondary/50">
-          <div className="container mx-auto max-w-7xl px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service) => (
-                <Card key={service.title} className="text-center flex flex-col items-center p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 bg-background">
-                    <div className="bg-primary/10 rounded-full p-4 mb-4">
-                      {service.icon}
+            <div className="container mx-auto max-w-7xl px-4 text-center">
+                <Button onClick={() => setShowTourismServices(!showTourismServices)} size="lg">
+                    {showTourismServices ? 'Masquer les Services Tourisme' : 'Découvrir nos Services Tourisme'}
+                </Button>
+                <Button onClick={() => setShowImportExportServices(!showImportExportServices)} size="lg" className="ml-4">
+                    {showImportExportServices ? 'Masquer l\'Assistance importation et exportation' : 'Assistance importation et exportation'}
+                </Button>
+
+                {showTourismServices && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                      {services.map((service) => (
+                        <Card key={service.title} className="text-center flex flex-col items-center p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 bg-background">
+                            <div className="bg-primary/10 rounded-full p-4 mb-4">
+                              {service.icon}
+                            </div>
+                            <CardHeader className="p-0">
+                              <CardTitle className="text-xl font-semibold text-primary">{service.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-0 mt-2 flex-grow">
+                              <p className="text-muted-foreground">{service.description}</p>
+                            </CardContent>
+                            <div className="mt-4">
+                              <QuoteRequestDialog>
+                                <Button variant="link">Demander un devis</Button>
+                              </QuoteRequestDialog>
+                            </div>
+                        </Card>
+                      ))}
                     </div>
-                    <CardHeader className="p-0">
-                      <CardTitle className="text-xl font-semibold text-primary">{service.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-0 mt-2 flex-grow">
-                      <p className="text-muted-foreground">{service.description}</p>
-                    </CardContent>
-                    <div className="mt-4">
-                      <QuoteRequestDialog>
-                        <Button variant="link">Demander un devis</Button>
-                      </QuoteRequestDialog>
+                )}
+
+                {showImportExportServices && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                      {importExportServices.map((service) => (
+                        <Card key={service.title} className="text-center flex flex-col items-center p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 bg-background">
+                            <div className="bg-primary/10 rounded-full p-4 mb-4">
+                              {service.icon}
+                            </div>
+                            <CardHeader className="p-0">
+                              <CardTitle className="text-xl font-semibold text-primary">{service.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-0 mt-2 flex-grow">
+                              <p className="text-muted-foreground">{service.description}</p>
+                            </CardContent>
+                            <div className="mt-4">
+                              <QuoteRequestDialog>
+                                <Button variant="link">Demander un devis</Button>
+                              </QuoteRequestDialog>
+                            </div>
+                        </Card>
+                      ))}
                     </div>
-                </Card>
-              ))}
+                )}
+
+                {showVehicleServices && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                      {vehicleServices.map((service) => (
+                        <Card key={service.title} className="text-center flex flex-col items-center p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 bg-background">
+                            <div className="bg-primary/10 rounded-full p-4 mb-4">
+                              {service.icon}
+                            </div>
+                            <CardHeader className="p-0">
+                              <CardTitle className="text-xl font-semibold text-primary">{service.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-0 mt-2 flex-grow">
+                              <p className="text-muted-foreground">{service.description}</p>
+                            </CardContent>
+                            <div className="mt-4">
+                              <QuoteRequestDialog>
+                                <Button variant="link">Demander un devis</Button>
+                              </QuoteRequestDialog>
+                            </div>
+                        </Card>
+                      ))}
+                    </div>
+                )}
             </div>
-          </div>
         </section>
       </main>
       <Footer />
