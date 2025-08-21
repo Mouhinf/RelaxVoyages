@@ -19,7 +19,7 @@ const vehicles = [
     description: 'Idéale pour les déplacements en ville, économique et fiable.',
     priceRent: '25 000 FCFA/jour',
     priceSale: undefined, // Use undefined for properties not applicable
-    image: '/placeholder-yaris.jpg', // Remplacez par l'image réelle
+    image: '/toyotayaris.webp', // Remplacez par l'image réelle
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const vehicles = [
     description: 'Confortable et spacieux pour les familles et les longs trajets.',
     priceRent: '40 000 FCFA/jour',
     priceSale: undefined,
-    image: '/placeholder-rav4.jpg', // Remplacez par l'image réelle
+    image: '/toyotarav4.webp', // Remplacez par l'image réelle
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const vehicles = [
     description: 'Parfait pour les voyages en groupe ou les transferts aéroport.',
     priceRent: '60 000 FCFA/jour',
     priceSale: undefined,
-    image: '/placeholder-hiace.jpg', // Remplacez par l'image réelle
+    image: '/toyotahiace.webp', // Remplacez par l'image réelle
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const vehicles = [
     description: 'Voyagez avec élégance et confort supérieur.',
     priceRent: '150 000 FCFA/jour',
     priceSale: undefined,
-    image: '/placeholder-mercedes.jpg', // Remplacez par l'image réelle
+    image: '/mercedese.avif', // Remplacez par l'image réelle
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const vehicles = [
     description: 'Prêt pour l\'aventure, même sur les terrains les plus difficiles.',
     priceRent: '80 000 FCFA/jour',
     priceSale: undefined,
-    image: '/placeholder-prado.jpg', // Remplacez par l'image réelle
+    image: '/toyotalang.webp', // Remplacez par l'image réelle
   },
   // Vehicles for sale
   // Vehicles for sale
@@ -66,7 +66,7 @@ const vehicles = [
  description: 'Compacte et agile, idéale pour la ville. Modèle neuf importé.',
  priceRent: undefined,
  priceSale: '8 500 000 FCFA', // Prix ajusté (exemple)
- image: '/placeholder-i10.jpg', // Placeholder
+ image: '/hundaii10.avif', // Placeholder
   },
   {
     id: 7,
@@ -75,7 +75,7 @@ const vehicles = [
  description: 'SUV familial fiable et bien entretenu. Occasion importée.',
  priceRent: undefined,
  priceSale: '15 000 000 FCFA', // Prix ajusté (exemple)
- image: '/placeholder-tucson.jpg', // Placeholder
+ image: '/TUCSON.avif', // Placeholder
   },
   {
     id: 8,
@@ -84,7 +84,7 @@ const vehicles = [
  description: 'Élégance et performance. Véhicule de luxe importé.',
     priceRent: undefined,
  priceSale: '35 000 000 FCFA', // Prix ajusté (exemple)
-    image: '/placeholder-bmw.jpg', // Placeholder (ajoutez une image de BMW)
+    image: '/bmw1.webp', // Placeholder (ajoutez une image de BMW)
   },
   {
     id: 7,
@@ -93,7 +93,7 @@ const vehicles = [
     description: 'SUV familial fiable et bien entretenu. Occasion importée.',
     priceRent: undefined,
     priceSale: '15 000 000 FCFA',
-    image: '/placeholder-tucson.jpg', // Placeholder
+    image: '/tucocc.avif', // Placeholder
   },
   {
     id: 9,
@@ -102,7 +102,7 @@ const vehicles = [
  description: 'Robuste et polyvalent pour l\'aventure et la route. Modèle importé.',
  priceRent: undefined,
  priceSale: '22 000 000 FCFA', // Prix ajusté (exemple)
-    image: '/placeholder-fortuner.jpg', // Placeholder (ajoutez une image de Fortuner)
+    image: '/fortuner.png', // Placeholder (ajoutez une image de Fortuner)
   },
   // Add more vehicles for sale here...
   // { id: 8, type: '...', name: '...', description: '...', priceRent: undefined, priceSale: '...', image: '...' },
@@ -187,7 +187,7 @@ export default function VehiclesPage() {
               </div>
               <div className="relative h-80 lg:h-full min-h-[300px] w-full rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/placeholder-nice-car.jpg" // Replace with an image of a nice car
+                  src="/voitaff.jpeg" // Replace with an image of a nice car
                   alt="Belle voiture"
                   fill
                   className="object-cover"
