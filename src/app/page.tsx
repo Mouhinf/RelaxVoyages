@@ -15,6 +15,8 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <HomeAbout />
+        <HomeServices />
+        <HomeDestinations />
         {/* Vehicle Brochure Section */}
         <section className="py-16 sm:py-24 bg-secondary/50">
           <div className="container mx-auto max-w-7xl px-4 text-center">
@@ -27,8 +29,6 @@ export default function Home() {
             </Button>
           </div>
         </section>
-        <HomeServices />
-        <HomeDestinations />
         <Contact />
       </main>
       <Footer />
