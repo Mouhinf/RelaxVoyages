@@ -35,8 +35,8 @@ import { fr } from 'date-fns/locale';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Le nom doit contenir au moins 2 caractères.' }),
-  email: z.string().email({ message: 'Veuillez entrer une adresse email valide.' }),
-  phone: z.string().optional(),
+  email: z.string().email({ message: 'Veuillez entrer une adresse email valide.' }).optional().or(z.literal('')),
+  phone: z.string().min(1, { message: 'Veuillez entrer un numéro de téléphone.' }),
   destination: z.string().min(2, { message: 'Veuillez préciser une destination.'}),
   departureDate: z.date({
     required_error: "Une date de départ est requise.",
@@ -104,6 +104,19 @@ export function QuoteRequestDialog({ children }: { children: React.ReactNode }) 
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input placeholder="Votre adresse email" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem className='mt-4'>
+                  <FormLabel>Numéro de téléphone</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Votre numéro de téléphone" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

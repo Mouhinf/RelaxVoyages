@@ -4,8 +4,11 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'; // Assurez-vous que Button est importé ici
 import { useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 
 const vehicles = [
   // Vehicles for rent
@@ -107,11 +110,22 @@ const vehicles = [
 
 export default function VehiclesPage() {
   const [activeSection, setActiveSection] = useState<'rent' | 'sale'>('rent'); // 'rent' or 'sale'
+  const [isRentalDialogOpen, setIsRentalDialogOpen] = useState(false);
+  const [isSaleDialogOpen, setIsSaleDialogOpen] = useState(false);
+  const [selectedVehicle, setSelectedVehicle] = useState<typeof vehicles[0] | null>(null);
 
   const rentalVehicles = vehicles.filter(vehicle => vehicle.priceRent !== undefined);
   const saleVehicles = vehicles.filter(vehicle => vehicle.priceSale !== undefined);
 
+  const handleRentButtonClick = (vehicle: typeof vehicles[0]) => {
+    setSelectedVehicle(vehicle);
+    setIsRentalDialogOpen(true);
+  };
 
+  const handleSaleButtonClick = (vehicle: typeof vehicles[0]) => {
+    setSelectedVehicle(vehicle);
+    setIsSaleDialogOpen(true);
+  };
 
   const renderVehicleCards = (vehicleList: typeof vehicles) => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
@@ -128,7 +142,14 @@ export default function VehiclesPage() {
             <p className="text-lg font-bold text-primary">{vehicle.priceRent || vehicle.priceSale}</p>
           </CardContent>
           <CardFooter>
-            <Button className="w-full">{vehicle.priceRent ? 'Réserver maintenant' : 'Acheter'}</Button>
+            <Button
+              className="w-full"
+              onClick={() =>
+                vehicle.priceRent ? handleRentButtonClick(vehicle) : handleSaleButtonClick(vehicle)
+              }
+            >
+              {vehicle.priceRent ? 'Réserver maintenant' : 'Acheter'}
+            </Button>
           </CardFooter>
         </Card>
       ))}
@@ -140,7 +161,7 @@ export default function VehiclesPage() {
         <Header /> {/* Le header est maintenant ici */}
         {/* Introduction Banner Section */}
         <section className="relative h-96 bg-cover bg-center" style={{ backgroundImage: 'url(/placeholder-car-banner.jpg)' }}>
-          {/* Replace with your actual banner image */}
+          {/* Replace with your actual banner image */}{/* Overlay removed */}
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="container mx-auto max-w-7xl px-4 flex items-center justify-center h-full">
             <div className="text-center text-white z-10">
@@ -212,6 +233,76 @@ export default function VehiclesPage() {
             </section>
         )}
       </main>
+
+      {/* Rental Dialog */}
+      <Dialog open={isRentalDialogOpen} onOpenChange={setIsRentalDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Réserver "{selectedVehicle?.name}"</DialogTitle>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="name" className="text-right">
+                Nom complet
+              </Label>
+              <Input id="name" className="col-span-3" />
+            </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="email" className="text-right">
+                Email
+              </Label>
+              <Input id="email" type="email" className="col-span-3" />
+            </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="phone" className="text-right">
+                Téléphone
+              </Label>
+              <Input id="phone" type="tel" className="col-span-3" />
+            </div>
+             <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="rentalDates" className="text-right">
+                Dates de location
+              </Label>
+              <Input id="rentalDates" className="col-span-3" placeholder="ex: 01/01/2024 - 05/01/2024" />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button type="submit">Envoyer la demande de réservation</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* Sale Dialog */}
+      <Dialog open={isSaleDialogOpen} onOpenChange={setIsSaleDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Acheter "{selectedVehicle?.name}"</DialogTitle>
+          </DialogHeader>
+           <div className="grid gap-4 py-4">
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="name" className="text-right">
+                Nom complet
+              </Label>
+              <Input id="name" className="col-span-3" />
+            </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="email" className="text-right">
+                Email
+              </Label>
+              <Input id="email" type="email" className="col-span-3" />
+            </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="phone" className="text-right">
+                Téléphone
+              </Label>
+              <Input id="phone" type="tel" className="col-span-3" />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button type="submit">Envoyer la demande d'achat</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
       <Footer />
     </div>
   );

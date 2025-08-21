@@ -138,6 +138,9 @@ export default function ServicesPage() {
                 <Button onClick={() => setShowImportExportServices(!showImportExportServices)} size="lg" className="ml-4">
                     {showImportExportServices ? 'Masquer l\'Assistance importation et exportation' : 'Assistance importation et exportation'}
                 </Button>
+                <Button onClick={() => setShowVehicleServices(!showVehicleServices)} size="lg" className="ml-4">
+                    {showVehicleServices ? 'Masquer Ventes et Locations de Véhicules' : 'Ventes et Locations de Véhicules'}
+                </Button>
 
                 {showTourismServices && (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
