@@ -10,7 +10,7 @@ export default function HomeAbout() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative h-80 lg:h-full min-h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/avion.jpg"
+              src="/slaaclogo.jpg"
               alt="Globe terrestre et carte du monde"
               fill
               className="object-cover"
