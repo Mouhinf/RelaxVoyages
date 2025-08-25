@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'SLAAC Voyages - Votre Passeport pour le Monde',
   description: "Découvrez le monde avec SLAAC Voyages, votre agence de confiance à Dakar. Billets d'avion, séjours sur mesure, et assistance visa. L'aventure vous attend.",
   keywords: "agence de voyage Dakar, billets d’avion Sénégal, SLAAC Voyage Dakar, packages touristiques Sénégal, Merveille Voyage Dakar, voyage sur mesure",
+  icons: {
+    icon: '/slaaclogo.jpg',
+  },
 };
 
 export default function RootLayout({

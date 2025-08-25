@@ -1,5 +1,1 @@
-# Firebase Studio
-
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+Ce projet est la réalisation d'un site internet s'appelant SLAAC Voyages.
