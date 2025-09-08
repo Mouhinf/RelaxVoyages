@@ -1,4 +1,4 @@
-# **App Name**: SLAAC Voyages Explorer
+# **App Name**: Relax Voyages Explorer
 
 ## Core Features:
 

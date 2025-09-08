@@ -1,4 +1,4 @@
-Ce projet est la réalisation d'un site internet s'appelant SLAAC Voyages.
+Ce projet est la réalisation d'un site internet s'appelant Relax Voyages.
 # relax-voyages
 # relax-voyage
 # relax-voyage
