@@ -1,24 +1,23 @@
 import Image from 'next/image';
-import { Users, Globe, Heart, Building, Award, Target, Download } from 'lucide-react';
+import { Users, Globe, Heart, Building, Award, Target } from 'lucide-react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import { Button } from '@/components/ui/button';
 
 const whyUs = [
   {
     icon: <Users className="h-8 w-8 text-primary" />,
-    title: 'Expertise Personnalisée',
-    description: "Notre équipe de passionnés du voyage met son expertise à votre service pour créer des itinéraires sur mesure qui répondent parfaitement à vos envies.",
+    title: "Plus de 20 ans d'expérience",
+    description: "Relax Voyages bénéficie de plus de 20 ans d'expérience dans le secteur du voyage et du tourisme, vous assurant un service expert et fiable.",
   },
   {
-    icon: <Globe className="h-8 w-8 text-primary" />,
-    title: 'Accès Global, Service Local',
-    description: 'Nous combinons un réseau mondial de partenaires avec une connaissance approfondie du terrain pour vous offrir le meilleur, où que vous alliez.',
+    icon: <Award className="h-8 w-8 text-primary" />,
+    title: "Agréée IATA et Ministère du Tourisme",
+    description: "Officiellement agréée par l'IATA et détentrice d'une licence du Ministère du Tourisme sénégalais, notre agence vous garantit sérieux et conformité.",
   },
   {
     icon: <Heart className="h-8 w-8 text-primary" />,
-    title: 'Engagement et Sérénité',
-    description: "Votre satisfaction et votre tranquillité d'esprit sont notre priorité. Nous nous occupons de tout, pour que vous n'ayez qu'à profiter.",
+    title: "Services Complets et Personnalisés",
+    description: "Nous ofrons une gamme complète de services, de la billetterie au tourisme religieux, avec un engagement pour des prestations personnalisées.",
   },
 ];
 
@@ -26,17 +25,17 @@ const companyInfo = [
   {
     icon: <Building className="h-10 w-10 text-primary" />,
     title: 'Notre Histoire',
-    description: "Fondée à Dakar, SLAAC Voyages est née d'une passion pour la découverte et le partage. Nous avons commencé avec une petite équipe et une grande vision : rendre le voyage accessible et inoubliable pour tous.",
+    description: "Relax Voyages est une agence de voyages établie à Dakar, Sénégal, bénéficiant de plus de 20 ans d'expérience dans le secteur du voyage et du tourisme.",
   },
   {
     icon: <Target className="h-10 w-10 text-primary" />,
     title: 'Notre Mission',
-    description: "Notre mission est de transformer vos rêves d'évasion en réalité en concevant des expériences de voyage authentiques, enrichissantes et parfaitement organisées. Nous nous engageons à offrir un service client exceptionnel à chaque étape de votre parcours.",
+    description: "Proposer une gamme complète de services pour répondre aux besoins des voyageurs, incluant la billetterie aérienne, le tourisme religieux, les transferts aéroport, la location de voitures, et l'hébergement.",
   },
   {
-    icon: <Award className="h-10 w-10 text-primary" />,
+    icon: <Globe className="h-10 w-10 text-primary" />,
     title: 'Nos Valeurs',
-    description: "Nous croyons en l'intégrité, la passion, et l'excellence. Chaque voyage que nous organisons est le reflet de notre engagement à offrir des services de qualité supérieure, tout en respectant les cultures locales et l'environnement.",
+    description: "Offrir des prestations personnalisées et adaptées aux exigences de notre clientèle, avec un ancrage fort dans le contexte sénégalais et une offre diversifiée.",
   },
 ]
 
@@ -45,11 +44,11 @@ export default function AboutPage() {
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
       <main className="flex-grow">
-        <section className="py-16 sm:py-24 bg-secondary">
+        <section className="py-16 sm:py-24 bg-primary/5">
           <div className="container mx-auto max-w-7xl px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary">Qui Sommes-Nous ?</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">À Propos de Relax Voyages</h1>
             <p className="mt-4 text-lg text-secondary-foreground max-w-3xl mx-auto">
-              Découvrez l'histoire, la mission et les valeurs qui font de SLAAC Voyages votre partenaire de confiance pour des aventures mémorables.
+              Découvrez comment notre expérience et notre engagement font de Relax Voyages votre partenaire idéal pour des voyages sereins et mémorables.
             </p>
           </div>
         </section>
@@ -59,47 +58,38 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-80 lg:h-full min-h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?q=80&w=600&h=800&fit=crop"
+                  src="/sydney.jpg"
                   alt="Globe terrestre et carte du monde"
                   fill
                   className="object-cover"
-                  data-ai-hint="world map travel"
                 />
               </div>
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary">Votre Guide pour des Voyages Inoubliables</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-primary">Voyagez en toute sérénité avec Relax Voyages</h2>
                 <div className="mt-4 text-lg text-muted-foreground space-y-4">
                   <p>
-                    SLAAC VOYAGES est une agence de voyages et de tourisme, basée au Centre ville de Dakar à l'immeuble TRAMES au premier étage, spécialisée dans la vente des billets d'avion pour toutes les destinations, les préinscriptions, l'assistance visa, les réservations d'hôtel, les prises de rendez-vous et le tourisme.
+                  Relax Voyages est une agence de voyages établie à Dakar, Sénégal, bénéficiant de plus de 20 ans d'expérience dans le secteur du voyage et du tourisme. Elle est officiellement agréée par l'Association Internationale du Transport Aérien (IATA) et détient une licence délivrée par le Ministère du Tourisme sénégalais, garantissant ainsi son sérieux et sa conformité aux normes du secteur.
                   </p>
                   <p>
-                    Nous proposons une gamme complète de services pour répondre à vos besoins professionnels et touristiques. Notre objectif est de vous offrir le meilleur du tourisme à travers des excursions authentiques, des circuits de voyages à thèmes, des séjours linguistiques, des séjours religieux, les Transferts en VTC ou par la plage.
+                  L'agence propose une gamme complète de services pour répondre aux besoins des voyageurs, incluant la billetterie aérienne, le tourisme religieux, les transferts vers et depuis l'aéroport international Blaise Diagne (AIBD), la location de voitures, ainsi que des solutions d'hébergement en hôtels et résidences meublées. Relax Voyages fait également partie du groupe Aviation Handling-Relax Voyages, ce qui renforce son expertise dans le domaine du voyage et de la logistique.
                   </p>
                   <p>
-                    Que vous soyez à la recherche d'aventure, de culture, d'adrénaline, Slaac Voyages est votre partenaire incontournable pour la réalisation de vos projets. Grace à nos experts, nous mettons au service de nos clients un dispositif d'accompagnement personnalisé, un système de filtrage et des outils de dernière génération afin de leurs garantir les meilleures offres et les billets d'avion les moins chers.
+                  Située à Dakar, à proximité de l'Hôpital Philippe Senghor, l'agence se distingue par son engagement à offrir des prestations personnalisées et adaptées aux exigences de sa clientèle, aussi bien locale qu’internationale. Pour le contact, elle est joignable au +221 77 184 57 57 et dispose de plateformes digitales pour faciliter l'accès à ses services.
                   </p>
-                </div>
-                 <div className="mt-6">
-                  <a href="/brochure-slaac-voyages.pdf" download>
-                    <Button size="lg" variant="default">
-                      <Download className="mr-2 h-5 w-5" />
-                      Télécharger notre brochure
-                    </Button>
-                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="py-16 sm:py-24 bg-secondary">
+        <section className="py-16 sm:py-24 bg-primary/5">
             <div className="container mx-auto max-w-7xl px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-primary">Pourquoi nous choisir ?</h2>
                 </div>
                  <div className="grid md:grid-cols-3 gap-8">
                   {whyUs.map((item) => (
-                    <div key={item.title} className="bg-background p-6 rounded-lg shadow-md flex items-start gap-4">
+                    <div key={item.title} className="bg-background p-6 rounded-lg shadow-md flex items-start gap-4 hover:shadow-xl transition-shadow duration-300">
                       <div className="flex-shrink-0 bg-primary/10 rounded-lg p-3">
                         {item.icon}
                       </div>
@@ -116,18 +106,18 @@ export default function AboutPage() {
         <section className="py-16 sm:py-24 bg-background">
             <div className="container mx-auto max-w-7xl px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-primary">Plus sur SLAAC Voyages</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-primary">Notre Agence</h2>
                 </div>
                 <div className="grid md:grid-cols-3 gap-8 text-center">
                     {companyInfo.map((item) => (
-                        <div key={item.title} className="bg-secondary/50 p-8 rounded-lg shadow-md flex flex-col items-center">
+                        <div key={item.title} className="bg-primary/5 p-8 rounded-lg shadow-md flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
                             <div className="bg-primary/10 rounded-full p-4 mb-4">
                                 {item.icon}
                             </div>
                             <h3 className="text-2xl font-semibold text-primary mb-2">{item.title}</h3>
                             <p className="text-muted-foreground">{item.description}</p>
                         </div>
-                    ))}
+                    ))}"
                 </div>
             </div>
         </section>

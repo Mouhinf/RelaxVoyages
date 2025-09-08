@@ -32,8 +32,8 @@ export default function Footer() {
       <div className="container mx-auto max-w-7xl px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-secondary-foreground">
           <div>
-            <h3 className="text-lg font-semibold text-primary">SLAAC Voyages</h3>
-            <p className="mt-2 text-sm">Votre passeport pour des aventures inoubliables.</p>
+            <h3 className="text-lg font-semibold text-primary">Relax Voyages</h3>
+            <p className="mt-2 text-sm">Votre passeport pour des voyages sereins.</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold text-primary">Navigation</h3>
@@ -64,12 +64,12 @@ export default function Footer() {
             <div className="flex gap-4 mt-4">
               <a href="#" className="hover:text-primary"><Facebook className="h-6 w-6" /></a>
               <a href="#" className="hover:text-primary"><Instagram className="h-6 w-6" /></a>
-              <a href="https://wa.me/221773129090" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><WhatsAppIcon className="h-6 w-6" /></a>
+              <a href="https://wa.me/221771845757" target="_blank" rel="noopener noreferrer" className="hover:text-primary"><WhatsAppIcon className="h-6 w-6" /></a>
             </div>
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} SLAAC Voyages. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Relax Voyages. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

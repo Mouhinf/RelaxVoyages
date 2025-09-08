@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Send } from 'lucide-react';
+import { Menu, Send, Globe } from 'lucide-react';
 import { QuoteRequestDialog } from './quote-request-dialog';
 
 const navLinks = [
@@ -15,9 +15,11 @@ const navLinks = [
   { href: '/about', label: 'À propos' },
 ];
 
-const PlaneIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+const GlobeIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
     </svg>
 );
 
@@ -33,8 +35,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-            <PlaneIcon className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg text-primary">SLAAC Voyages</span>
+            <GlobeIcon className="h-6 w-6 text-primary" />
+          <span className="font-bold text-lg text-primary">Relax Voyages</span>
         </Link>
 
         <nav className="hidden md:flex gap-6">
@@ -50,7 +52,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-            <a href="https://wa.me/221773129090" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/221771845757" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="icon" className="hidden sm:flex">
                     <WhatsAppIcon className="h-5 w-5 fill-current" />
                     <span className="sr-only">Contacter sur WhatsApp</span>
@@ -72,8 +74,8 @@ export default function Header() {
             <SheetContent side="right">
               <div className="grid gap-6 p-6">
                 <Link href="/" className="flex items-center gap-2">
-                   <PlaneIcon className="h-6 w-6 text-primary" />
-                  <span className="font-bold text-lg text-primary">SLAAC Voyages</span>
+                   <GlobeIcon className="h-6 w-6 text-primary" />
+                  <span className="font-bold text-lg text-primary">Relax Voyages</span>
                 </Link>
                 <nav className="grid gap-4">
                   {navLinks.map((link) => (
@@ -92,7 +94,7 @@ export default function Header() {
                       <Send className="ml-2 h-4 w-4" />
                   </Button>
                 </QuoteRequestDialog>
-                <a href="https://wa.me/221773129090" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/221771845757" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="w-full">
                         <WhatsAppIcon className="mr-2 h-5 w-5 fill-current" /> Contacter sur WhatsApp
                     </Button>
