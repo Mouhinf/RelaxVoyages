@@ -62,15 +62,15 @@ export default function Contact() {
                 <div className="p-3 bg-primary/10 rounded-full"><MapPin className="h-6 w-6 text-primary" /></div>
                 <div>
                     <h3 className="text-lg font-semibold text-primary">Notre Bureau</h3>
-                    <p className="text-muted-foreground">Immeuble TRAMES, 1er étage, Centre-ville, Dakar, Sénégal</p>
+                    <p className="text-muted-foreground">331,ROUTE DE L'AEROPORT YOFF LAYENE, Dakar, Sénégal</p>
                 </div>
             </div>
             <div className="flex items-start gap-4">
                 <div className="p-3 bg-primary/10 rounded-full"><WhatsAppIcon className="h-6 w-6 text-primary" /></div>
                 <div>
                     <h3 className="text-lg font-semibold text-primary">WhatsApp</h3>
-                    <a href="https://wa.me/221773129090" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center gap-2">
-                        <WhatsAppIcon className="h-4 w-4 fill-current" /> +221 77 312 90 90 (Discussion instantanée)
+                    <a href="https://wa.me/221776350660" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary flex items-center gap-2">
+                        <WhatsAppIcon className="h-4 w-4 fill-current" /> +221 77 635 06 60 (Discussion instantanée)
                     </a>
                 </div>
             </div>
